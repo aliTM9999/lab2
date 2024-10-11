@@ -1,0 +1,37 @@
+19:39:50 **** Incremental Build of configuration Debug for project Lab1 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:143:62: warning: passing argument 2 of 'kalman_assem' from incompatible pointer type [-Wincompatible-pointer-types]
+  143 |       test_array_output_ass[i] = kalman_assem(TEST_ARRAY[i], &stateArr);
+      |                                                              ^~~~~~~~~
+      |                                                              |
+      |                                                              float (*)[5]
+In file included from ../Core/Src/main.c:20:
+../Core/Inc/main.h:36:47: note: expected 'float *' but argument is of type 'float (*)[5]'
+   36 | extern float kalman_assem(float input, float* kstate);
+      |                                        ~~~~~~~^~~~~~
+../Core/Src/main.c:151:15: warning: implicit declaration of function 'KalmanfilterCMSIS'; did you mean 'Kalmanfilter'? [-Wimplicit-function-declaration]
+  151 |     output2 = KalmanfilterCMSIS(TEST_ARRAY, test_array_output_cmsis, &state2, l);
+      |               ^~~~~~~~~~~~~~~~~
+      |               Kalmanfilter
+../Core/Src/main.c:174:45: warning: variable 'stddev' set but not used [-Wunused-but-set-variable]
+  174 |   float sum = 0.0, average, variance = 0.0, stddev;
+      |                                             ^~~~~~
+../Core/Src/main.c:123:9: warning: variable 'test_array_output_ass' set but not used [-Wunused-but-set-variable]
+  123 |   float test_array_output_ass[101];
+      |         ^~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Lab1.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\Lab1\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab1.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\Lab1\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab1.elf
+ 
+arm-none-eabi-size  Lab1.elf 
+arm-none-eabi-objdump -h -S Lab1.elf  > "Lab1.list"
+   text	   data	    bss	    dec	    hex	filename
+  84572	    112	   1880	  86564	  15224	Lab1.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab1.list
+ 
+
+19:39:51 Build Finished. 0 errors, 4 warnings. (took 1s.537ms)
+
