@@ -101,6 +101,7 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
 	  //VOLTAGE
+	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
 	  ADC_ChannelConfTypeDef channel_config = {.Channel = ADC_CHANNEL_VREFINT, .Rank = ADC_REGULAR_RANK_1, .SamplingTime=ADC_SAMPLETIME_12CYCLES_5,
 			  .SingleDiff = ADC_SINGLE_ENDED, .OffsetNumber = ADC_OFFSET_NONE, .Offset=0
 	  };
@@ -118,6 +119,7 @@ int main(void)
 
 
 	  //TEMPERATURE
+	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
 	  ADC_ChannelConfTypeDef channel_config2 = {.Channel = ADC_CHANNEL_TEMPSENSOR, .Rank = ADC_REGULAR_RANK_1, .SamplingTime=ADC_SAMPLETIME_12CYCLES_5,
 	  			  .SingleDiff = ADC_SINGLE_ENDED, .OffsetNumber = ADC_OFFSET_NONE, .Offset=0
 	  	  };
