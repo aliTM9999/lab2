@@ -31,7 +31,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+char adc_mode = 2;//Boolean to have chip read voltage first and then let user press on button to chose whether voltage or temp is read
+uint32_t vdda_voltage;//variable to hold voltage reference
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -101,54 +102,64 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
 	  //VOLTAGE
-	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
-	  ADC_ChannelConfTypeDef channel_config = {.Channel = ADC_CHANNEL_VREFINT, .Rank = ADC_REGULAR_RANK_1, .SamplingTime=ADC_SAMPLETIME_12CYCLES_5,
-			  .SingleDiff = ADC_SINGLE_ENDED, .OffsetNumber = ADC_OFFSET_NONE, .Offset=0
-	  };
+	  if(adc_mode == 0 || adc_mode == 2){
+		  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);//LED turned on when reading voltage
 
-	  if(HAL_ADC_ConfigChannel(&hadc1, &channel_config) != HAL_OK){
-		  return -1;
-	  }
-	  HAL_ADC_Start(&hadc1);
+		  //configuration of channel for reading reference voltage
+		  ADC_ChannelConfTypeDef channel_config = {.Channel = ADC_CHANNEL_VREFINT, .Rank = ADC_REGULAR_RANK_1,
+				  .SamplingTime=ADC_SAMPLETIME_12CYCLES_5, .SingleDiff = ADC_SINGLE_ENDED, .OffsetNumber = ADC_OFFSET_NONE, .Offset=0
+		  };//12.5 is the sampling time corresponding to chosen resolution of 12
 
-	  HAL_ADC_PollForConversion(&hadc1, 0xFFFF);
-	  uint32_t adcValue = HAL_ADC_GetValue(&hadc1);
-	  HAL_ADC_Stop(&hadc1);
-	  uint32_t vdda_voltage = __HAL_ADC_CALC_VREFANALOG_VOLTAGE(adcValue, ADC_RESOLUTION_12B);
+		  if(HAL_ADC_ConfigChannel(&hadc1, &channel_config) != HAL_OK){
+			  return -1;
+		  }
+		  HAL_ADC_Start(&hadc1);//starting ADC
 
+		  HAL_ADC_PollForConversion(&hadc1, 0xFFFF);//poll and wait for ADC conversion to complete
+		  uint32_t adcValue = HAL_ADC_GetValue(&hadc1);
+		  HAL_ADC_Stop(&hadc1);
 
-
-	  //TEMPERATURE
-	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
-	  ADC_ChannelConfTypeDef channel_config2 = {.Channel = ADC_CHANNEL_TEMPSENSOR, .Rank = ADC_REGULAR_RANK_1, .SamplingTime=ADC_SAMPLETIME_12CYCLES_5,
-	  			  .SingleDiff = ADC_SINGLE_ENDED, .OffsetNumber = ADC_OFFSET_NONE, .Offset=0
-	  	  };
-	  if(HAL_ADC_ConfigChannel(&hadc1, &channel_config2) != HAL_OK){
-	  		  return -1;
-	  }
-	  HAL_ADC_Start(&hadc1);
-
-	  HAL_ADC_PollForConversion(&hadc1, 0xFFFF);
-	  adcValue = HAL_ADC_GetValue(&hadc1);
-	  HAL_ADC_Stop(&hadc1);
-
-
-	  uint32_t VREFANALOG_VOLTAGE = 3300;
-	  int32_t Temperature = __HAL_ADC_CALC_TEMPERATURE(VREFANALOG_VOLTAGE, adcValue,ADC_RESOLUTION_12B);
-
-	  /*float V_REF = 3.3f;
-	  float V_30 = 0.76f;           // Voltage at 30°C
-	  float Avg_Slope = 2.5f / 1000;
-
-	  float V_Sense = (adcValue * V_REF) / 4096.0f; // dividing by 4096 because of 12-bits resolution of ADC
-	  float temperature = ((V_Sense - V_30) / Avg_Slope) + 30.0f;*/
-
-
-	  char button_status= HAL_GPIO_ReadPin(button_GPIO_Port, button_Pin);
-	  if(button_status== 0){
-		  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
+		  //we use the HAL ADC function to calculate reference voltage depending on resolution chosen
+		  vdda_voltage = __HAL_ADC_CALC_VREFANALOG_VOLTAGE(adcValue, ADC_RESOLUTION_12B);
 	  }else{
-		  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
+
+		  //TEMPERATURE
+		  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);//LED turned off when reading temperature
+
+		  //configuration of channel for reading temperature
+		  ADC_ChannelConfTypeDef channel_config2 = {.Channel = ADC_CHANNEL_TEMPSENSOR, .Rank = ADC_REGULAR_RANK_1,
+				  .SamplingTime=ADC_SAMPLETIME_12CYCLES_5, .SingleDiff = ADC_SINGLE_ENDED, .OffsetNumber = ADC_OFFSET_NONE, .Offset=0
+			  };//12.5 is the sampling time corresponding to chosen resolution of 12
+
+		  if(HAL_ADC_ConfigChannel(&hadc1, &channel_config2) != HAL_OK){
+				  return -1;
+		  }
+		  HAL_ADC_Start(&hadc1);//starting ADC
+
+		  HAL_ADC_PollForConversion(&hadc1, 0xFFFF);//poll and wait for ADC conversion to complete
+		  uint32_t adcValue = HAL_ADC_GetValue(&hadc1);
+		  HAL_ADC_Stop(&hadc1);
+
+
+		  //we use the HAL ADC function to calculate temperature depending on resolution chosen (manual computation done in comment below)
+		  int32_t Temperature = __HAL_ADC_CALC_TEMPERATURE(vdda_voltage, adcValue,ADC_RESOLUTION_12B);
+		  float V_REF = 3.3f;
+
+		  //temperature code done with conversion (COMMENT FOR REPORT)
+		  /*
+		  float V_30 = 0.76f;           // Voltage at 30°C
+		  float Avg_Slope = 2.5f / 1000;
+
+		  float V_Sense = (adcValue * V_REF) / 4096.0f; // dividing by 4096 because of 12-bits resolution of ADC
+	  	  float temperature = ((V_Sense - V_30) / Avg_Slope) + 30.0f;*/
+	  }
+
+
+	  char button_status= HAL_GPIO_ReadPin(button_GPIO_Port, button_Pin);//reading whether button is pressed or not
+	  if(button_status== 0){
+		  adc_mode = 0;//if button is pressed, do voltage reading
+	  }else{
+		  adc_mode = 1;//if button not pressed, do temperature reading
 	  }
   }
   /* USER CODE END 3 */
