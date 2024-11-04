@@ -42,6 +42,8 @@
 /* Private variables ---------------------------------------------------------*/
 DAC_HandleTypeDef hdac1;
 
+TIM_HandleTypeDef htim2;
+
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -50,13 +52,24 @@ DAC_HandleTypeDef hdac1;
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_DAC1_Init(void);
+static void MX_TIM2_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+int32_t status = 0;
 
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+	if(GPIO_Pin == GPIO_PIN_13 && status == 0){
+		status = 1;
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
+	}else if (GPIO_Pin == GPIO_PIN_13 && status == 1){
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
+		status = 0;
+	}
+}
 /* USER CODE END 0 */
 
 /**
@@ -89,12 +102,13 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_DAC1_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-  uint32_t saw = 0;
-  uint32_t triangle = 0;
+  int32_t saw = 0;
+  int32_t triangle = 0;
   int32_t step = 10;
   float32_t phase = 0.0f;
-  uint32_t sine = 0;
+  int32_t sine = 0;
   HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
   HAL_DAC_Start(&hdac1, DAC_CHANNEL_2);
   /* USER CODE END 2 */
@@ -105,13 +119,13 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
-
+    /* USER CODE BEGIN 3 */
 	//sine wave
-	float32_t sine_float = 128.0f * (arm_sin_f32(phase)+1.0f);
+	float32_t sine_float = 100.0f * (arm_sin_f32(phase)+1.0f);//100 to prevent clipping at the top value
 	sine = (uint32_t) sine_float;
 
 	//set value for channel 1
-	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sine);
+	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_2, DAC_ALIGN_8B_R, saw);
 
 	phase += 2 * 3.14159265f * 0.066;
 
@@ -121,25 +135,26 @@ int main(void)
 
 	saw += 10;
 
-	if (saw >= 256) // Reset when max is reached (8-bit max)
+	//200 to prevent clipping at the top value
+	if (saw >= 200) // Reset when max is reached (8-bit max)
 	{
 		saw = 0;
 	}
 
-	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_2, DAC_ALIGN_8B_R, triangle);
+	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, triangle);
 	triangle += step;
 
-	if (triangle >= 256) // start decreasing when max is reached
+	//200 to prevent clipping at the top value
+	if (triangle >= 200) // start decreasing when max is reached
 	{
 		step = -step;
-		triangle = 256;
+		triangle = 200;
 	}else if(triangle <=0){//start increasing when min is reached
 		step = -step;
 		triangle = 0;
 	}
 	HAL_Delay(15);
-    /* USER CODE BEGIN 3 */
-  }
+}
   /* USER CODE END 3 */
 }
 
@@ -222,7 +237,7 @@ static void MX_DAC1_Init(void)
   /** DAC channel OUT1 config
   */
   sConfig.DAC_SampleAndHold = DAC_SAMPLEANDHOLD_DISABLE;
-  sConfig.DAC_Trigger = DAC_TRIGGER_NONE;
+  sConfig.DAC_Trigger = DAC_TRIGGER_T2_TRGO;
   sConfig.DAC_HighFrequency = DAC_HIGH_FREQUENCY_INTERFACE_MODE_ABOVE_80MHZ;
   sConfig.DAC_OutputBuffer = DAC_OUTPUTBUFFER_ENABLE;
   sConfig.DAC_ConnectOnChipPeripheral = DAC_CHIPCONNECT_DISABLE;
@@ -234,6 +249,7 @@ static void MX_DAC1_Init(void)
 
   /** DAC channel OUT2 config
   */
+  sConfig.DAC_Trigger = DAC_TRIGGER_NONE;
   if (HAL_DAC_ConfigChannel(&hdac1, &sConfig, DAC_CHANNEL_2) != HAL_OK)
   {
     Error_Handler();
@@ -241,6 +257,51 @@ static void MX_DAC1_Init(void)
   /* USER CODE BEGIN DAC1_Init 2 */
 
   /* USER CODE END DAC1_Init 2 */
+
+}
+
+/**
+  * @brief TIM2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM2_Init(void)
+{
+
+  /* USER CODE BEGIN TIM2_Init 0 */
+
+  /* USER CODE END TIM2_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM2_Init 1 */
+
+  /* USER CODE END TIM2_Init 1 */
+  htim2.Instance = TIM2;
+  htim2.Init.Prescaler = 0;
+  htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim2.Init.Period = 4294967295;
+  htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim2, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_UPDATE;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM2_Init 2 */
+
+  /* USER CODE END TIM2_Init 2 */
 
 }
 
@@ -258,12 +319,23 @@ static void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : PC13 */
   GPIO_InitStruct.Pin = GPIO_PIN_13;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PB14 */
+  GPIO_InitStruct.Pin = GPIO_PIN_14;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);

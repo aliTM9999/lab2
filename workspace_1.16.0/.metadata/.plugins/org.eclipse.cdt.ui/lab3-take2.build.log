@@ -1,0 +1,33 @@
+15:08:56 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:160:11: warning: unused variable 'step' [-Wunused-variable]
+  160 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:159:11: warning: unused variable 'triangle' [-Wunused-variable]
+  159 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:158:11: warning: unused variable 'sine' [-Wunused-variable]
+  158 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:157:11: warning: unused variable 'saw' [-Wunused-variable]
+  157 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:156:13: warning: unused variable 'phase' [-Wunused-variable]
+  156 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  18304	     12	  11364	  29680	   73f0	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+
+15:08:57 Build Finished. 0 errors, 5 warnings. (took 1s.22ms)
+

@@ -1,153 +1,975 @@
-10:49:21 **** Incremental Build of configuration Debug for project lab3 ****
-make -j16 all 
-arm-none-eabi-gcc -o "lab3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: lab3.elf
- 
-arm-none-eabi-size  lab3.elf 
-arm-none-eabi-objdump -h -S lab3.elf  > "lab3.list"
-   text	   data	    bss	    dec	    hex	filename
-  11584	     12	   1588	  13184	   3380	lab3.elf
-Finished building: default.size.stdout
- 
-Finished building: lab3.list
- 
-10:49:40 **** Incremental Build of configuration Debug for project lab3 ****
-make -j16 all 
-arm-none-eabi-size  lab3.elf 
-   text	   data	    bss	    dec	    hex	filename
-  11584	     12	   1588	  13184	   3380	lab3.elf
-Finished building: default.size.stdout
- 
-10:52:52 **** Incremental Build of configuration Debug for project lab3 ****
+20:04:17 **** Incremental Build of configuration Debug for project lab3-take2 ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "lab3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: lab3.elf
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
  
-arm-none-eabi-size  lab3.elf 
-arm-none-eabi-objdump -h -S lab3.elf  > "lab3.list"
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
    text	   data	    bss	    dec	    hex	filename
-  11584	     12	   1588	  13184	   3380	lab3.elf
+  11324	     12	   1588	  12924	   327c	lab3-take2.elf
 Finished building: default.size.stdout
  
-Finished building: lab3.list
+Finished building: lab3-take2.list
  
-10:53:52 **** Incremental Build of configuration Debug for project lab3 ****
-make -j16 all 
-arm-none-eabi-size  lab3.elf 
-   text	   data	    bss	    dec	    hex	filename
-  11584	     12	   1588	  13184	   3380	lab3.elf
-Finished building: default.size.stdout
- 
-10:54:27 **** Incremental Build of configuration Debug for project lab3 ****
-make -j16 all 
-arm-none-eabi-size  lab3.elf 
-   text	   data	    bss	    dec	    hex	filename
-  11584	     12	   1588	  13184	   3380	lab3.elf
-Finished building: default.size.stdout
- 
-10:55:14 **** Incremental Build of configuration Debug for project lab3 ****
+20:04:30 **** Incremental Build of configuration Debug for project lab3-take2 ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "lab3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: lab3.elf
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
  
-arm-none-eabi-size  lab3.elf 
-arm-none-eabi-objdump -h -S lab3.elf  > "lab3.list"
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
    text	   data	    bss	    dec	    hex	filename
-  11584	     12	   1588	  13184	   3380	lab3.elf
+  11324	     12	   1588	  12924	   327c	lab3-take2.elf
 Finished building: default.size.stdout
  
-Finished building: lab3.list
+Finished building: lab3-take2.list
  
-10:57:03 **** Incremental Build of configuration Debug for project lab3 ****
+20:05:52 **** Incremental Build of configuration Debug for project lab3-take2 ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "lab3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: lab3.elf
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
  
-arm-none-eabi-size  lab3.elf 
-arm-none-eabi-objdump -h -S lab3.elf  > "lab3.list"
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
    text	   data	    bss	    dec	    hex	filename
-  11584	     12	   1588	  13184	   3380	lab3.elf
+  11324	     12	   1588	  12924	   327c	lab3-take2.elf
 Finished building: default.size.stdout
  
-Finished building: lab3.list
+Finished building: lab3-take2.list
  
-10:57:42 **** Incremental Build of configuration Debug for project lab3 ****
+20:24:59 **** Incremental Build of configuration Debug for project lab3-take2 ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "lab3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: lab3.elf
- 
-arm-none-eabi-size  lab3.elf 
-arm-none-eabi-objdump -h -S lab3.elf  > "lab3.list"
-   text	   data	    bss	    dec	    hex	filename
-  11584	     12	   1588	  13184	   3380	lab3.elf
-Finished building: default.size.stdout
- 
-Finished building: lab3.list
- 
-10:58:49 **** Incremental Build of configuration Debug for project lab3 ****
-make -j16 all 
-arm-none-eabi-size  lab3.elf 
-   text	   data	    bss	    dec	    hex	filename
-  11584	     12	   1588	  13184	   3380	lab3.elf
-Finished building: default.size.stdout
- 
-11:04:28 **** Incremental Build of configuration Debug for project lab3 ****
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:120:9: error: 'sine' undeclared (first use in this function); did you mean 'sinl'?
+  120 |         sine = (uint32_t) sine_float;
+      |         ^~~~
+      |         sinl
+../Core/Src/main.c:120:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+20:25:31 **** Incremental Build of configuration Debug for project lab3-take2 ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "lab3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: lab3.elf
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
  
-arm-none-eabi-size  lab3.elf 
-arm-none-eabi-objdump -h -S lab3.elf  > "lab3.list"
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
    text	   data	    bss	    dec	    hex	filename
-  11584	     12	   1588	  13184	   3380	lab3.elf
+  11772	     12	   1596	  13380	   3444	lab3-take2.elf
 Finished building: default.size.stdout
  
-Finished building: lab3.list
+Finished building: lab3-take2.list
  
-11:09:48 **** Incremental Build of configuration Debug for project lab3 ****
-make -j16 all 
-arm-none-eabi-size  lab3.elf 
-   text	   data	    bss	    dec	    hex	filename
-  11584	     12	   1588	  13184	   3380	lab3.elf
-Finished building: default.size.stdout
- 
-11:11:13 **** Incremental Build of configuration Debug for project lab3 ****
-make -j16 all 
-arm-none-eabi-size  lab3.elf 
-   text	   data	    bss	    dec	    hex	filename
-  11584	     12	   1588	  13184	   3380	lab3.elf
-Finished building: default.size.stdout
- 
-11:13:23 **** Incremental Build of configuration Debug for project lab3 ****
+20:26:29 **** Incremental Build of configuration Debug for project lab3-take2 ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "lab3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: lab3.elf
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
  
-arm-none-eabi-size  lab3.elf 
-arm-none-eabi-objdump -h -S lab3.elf  > "lab3.list"
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
    text	   data	    bss	    dec	    hex	filename
-  11584	     12	   1588	  13184	   3380	lab3.elf
+  11772	     12	   1596	  13380	   3444	lab3-take2.elf
 Finished building: default.size.stdout
  
-Finished building: lab3.list
+Finished building: lab3-take2.list
  
-11:14:20 **** Incremental Build of configuration Debug for project lab3 ****
+20:29:29 **** Incremental Build of configuration Debug for project lab3-take2 ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "lab3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: lab3.elf
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
  
-arm-none-eabi-size  lab3.elf 
-arm-none-eabi-objdump -h -S lab3.elf  > "lab3.list"
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
    text	   data	    bss	    dec	    hex	filename
-  11584	     12	   1588	  13184	   3380	lab3.elf
+  11804	     12	   1588	  13404	   345c	lab3-take2.elf
 Finished building: default.size.stdout
  
-Finished building: lab3.list
+Finished building: lab3-take2.list
+ 
+20:30:18 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  11804	     12	   1588	  13404	   345c	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+21:12:00 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32l4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32l4xx.d" -MT"Core/Src/system_stm32l4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32l4xx.o"
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  14196	     12	   1668	  15876	   3e04	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+10:46:18 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:90:27: error: 'hdac' undeclared (first use in this function); did you mean 'hdac1'?
+   90 |         HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_8B_R, (uint32_t)sine_table[sample_index]);
+      |                           ^~~~
+      |                           hdac1
+../Core/Src/main.c:90:27: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:135:11: warning: unused variable 'step' [-Wunused-variable]
+  135 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:134:11: warning: unused variable 'triangle' [-Wunused-variable]
+  134 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:133:11: warning: unused variable 'sine' [-Wunused-variable]
+  133 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:132:11: warning: unused variable 'saw' [-Wunused-variable]
+  132 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:131:13: warning: unused variable 'phase' [-Wunused-variable]
+  131 |   float32_t phase = 0.0f;
+      |             ^~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+10:46:30 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:135:11: warning: unused variable 'step' [-Wunused-variable]
+  135 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:134:11: warning: unused variable 'triangle' [-Wunused-variable]
+  134 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:133:11: warning: unused variable 'sine' [-Wunused-variable]
+  133 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:132:11: warning: unused variable 'saw' [-Wunused-variable]
+  132 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:131:13: warning: unused variable 'phase' [-Wunused-variable]
+  131 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  13368	     12	   2076	  15456	   3c60	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+10:48:47 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:136:11: warning: unused variable 'step' [-Wunused-variable]
+  136 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:135:11: warning: unused variable 'triangle' [-Wunused-variable]
+  135 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:134:11: warning: unused variable 'sine' [-Wunused-variable]
+  134 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:133:11: warning: unused variable 'saw' [-Wunused-variable]
+  133 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:132:13: warning: unused variable 'phase' [-Wunused-variable]
+  132 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  13372	     12	   2076	  15460	   3c64	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+10:49:43 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:136:11: warning: unused variable 'step' [-Wunused-variable]
+  136 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:135:11: warning: unused variable 'triangle' [-Wunused-variable]
+  135 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:134:11: warning: unused variable 'sine' [-Wunused-variable]
+  134 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:133:11: warning: unused variable 'saw' [-Wunused-variable]
+  133 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:132:13: warning: unused variable 'phase' [-Wunused-variable]
+  132 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  13380	     12	   2076	  15468	   3c6c	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+10:51:35 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:136:11: warning: unused variable 'step' [-Wunused-variable]
+  136 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:135:11: warning: unused variable 'triangle' [-Wunused-variable]
+  135 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:134:11: warning: unused variable 'sine' [-Wunused-variable]
+  134 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:133:11: warning: unused variable 'saw' [-Wunused-variable]
+  133 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:132:13: warning: unused variable 'phase' [-Wunused-variable]
+  132 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  15528	     12	   2076	  17616	   44d0	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+10:53:50 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-size  lab3-take2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15528	     12	   2076	  17616	   44d0	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+10:54:57 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-size  lab3-take2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15528	     12	   2076	  17616	   44d0	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+10:56:16 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-size  lab3-take2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15528	     12	   2076	  17616	   44d0	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+11:02:35 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:138:11: warning: unused variable 'step' [-Wunused-variable]
+  138 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:137:11: warning: unused variable 'triangle' [-Wunused-variable]
+  137 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:136:11: warning: unused variable 'sine' [-Wunused-variable]
+  136 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:135:11: warning: unused variable 'saw' [-Wunused-variable]
+  135 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:134:13: warning: unused variable 'phase' [-Wunused-variable]
+  134 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  15536	     12	   2076	  17624	   44d8	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+11:03:04 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-size  lab3-take2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15536	     12	   2076	  17624	   44d8	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+11:05:06 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-size  lab3-take2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15536	     12	   2076	  17624	   44d8	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+11:10:30 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:138:11: warning: unused variable 'step' [-Wunused-variable]
+  138 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:137:11: warning: unused variable 'triangle' [-Wunused-variable]
+  137 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:136:11: warning: unused variable 'sine' [-Wunused-variable]
+  136 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:135:11: warning: unused variable 'saw' [-Wunused-variable]
+  135 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:134:13: warning: unused variable 'phase' [-Wunused-variable]
+  134 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  15532	     12	   2076	  17620	   44d4	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+11:11:49 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:138:11: warning: unused variable 'step' [-Wunused-variable]
+  138 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:137:11: warning: unused variable 'triangle' [-Wunused-variable]
+  137 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:136:11: warning: unused variable 'sine' [-Wunused-variable]
+  136 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:135:11: warning: unused variable 'saw' [-Wunused-variable]
+  135 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:134:13: warning: unused variable 'phase' [-Wunused-variable]
+  134 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  15536	     12	   2076	  17624	   44d8	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+11:17:06 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:138:11: warning: unused variable 'step' [-Wunused-variable]
+  138 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:137:11: warning: unused variable 'triangle' [-Wunused-variable]
+  137 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:136:11: warning: unused variable 'sine' [-Wunused-variable]
+  136 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:135:11: warning: unused variable 'saw' [-Wunused-variable]
+  135 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:134:13: warning: unused variable 'phase' [-Wunused-variable]
+  134 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  15536	     12	   2076	  17624	   44d8	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+11:18:13 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  15756	     12	   2076	  17844	   45b4	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+11:22:09 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:138:11: warning: unused variable 'step' [-Wunused-variable]
+  138 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:137:11: warning: unused variable 'triangle' [-Wunused-variable]
+  137 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:136:11: warning: unused variable 'sine' [-Wunused-variable]
+  136 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:135:11: warning: unused variable 'saw' [-Wunused-variable]
+  135 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:134:13: warning: unused variable 'phase' [-Wunused-variable]
+  134 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  15536	     12	   2076	  17624	   44d8	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+11:23:52 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:137:11: warning: unused variable 'step' [-Wunused-variable]
+  137 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:136:11: warning: unused variable 'triangle' [-Wunused-variable]
+  136 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:135:11: warning: unused variable 'sine' [-Wunused-variable]
+  135 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:134:11: warning: unused variable 'saw' [-Wunused-variable]
+  134 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:133:13: warning: unused variable 'phase' [-Wunused-variable]
+  133 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  15536	     12	   2076	  17624	   44d8	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+11:25:08 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:136:11: warning: unused variable 'step' [-Wunused-variable]
+  136 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:135:11: warning: unused variable 'triangle' [-Wunused-variable]
+  135 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:134:11: warning: unused variable 'sine' [-Wunused-variable]
+  134 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:133:11: warning: unused variable 'saw' [-Wunused-variable]
+  133 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:132:13: warning: unused variable 'phase' [-Wunused-variable]
+  132 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  15540	     12	   5676	  21228	   52ec	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+11:25:50 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:136:11: warning: unused variable 'step' [-Wunused-variable]
+  136 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:135:11: warning: unused variable 'triangle' [-Wunused-variable]
+  135 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:134:11: warning: unused variable 'sine' [-Wunused-variable]
+  134 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:133:11: warning: unused variable 'saw' [-Wunused-variable]
+  133 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:132:13: warning: unused variable 'phase' [-Wunused-variable]
+  132 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  15536	     12	   2476	  18024	   4668	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+14:49:37 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: unused variable 'step' [-Wunused-variable]
+  139 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:138:11: warning: unused variable 'triangle' [-Wunused-variable]
+  138 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:137:11: warning: unused variable 'sine' [-Wunused-variable]
+  137 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:136:11: warning: unused variable 'saw' [-Wunused-variable]
+  136 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:135:13: warning: unused variable 'phase' [-Wunused-variable]
+  135 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  17592	     12	   2164	  19768	   4d38	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+14:51:35 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: unused variable 'step' [-Wunused-variable]
+  139 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:138:11: warning: unused variable 'triangle' [-Wunused-variable]
+  138 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:137:11: warning: unused variable 'sine' [-Wunused-variable]
+  137 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:136:11: warning: unused variable 'saw' [-Wunused-variable]
+  136 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:135:13: warning: unused variable 'phase' [-Wunused-variable]
+  135 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  17592	     12	   1964	  19568	   4c70	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+14:52:08 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: unused variable 'step' [-Wunused-variable]
+  139 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:138:11: warning: unused variable 'triangle' [-Wunused-variable]
+  138 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:137:11: warning: unused variable 'sine' [-Wunused-variable]
+  137 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:136:11: warning: unused variable 'saw' [-Wunused-variable]
+  136 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:135:13: warning: unused variable 'phase' [-Wunused-variable]
+  135 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  17592	     12	   2084	  19688	   4ce8	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+14:52:45 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: unused variable 'step' [-Wunused-variable]
+  139 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:138:11: warning: unused variable 'triangle' [-Wunused-variable]
+  138 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:137:11: warning: unused variable 'sine' [-Wunused-variable]
+  137 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:136:11: warning: unused variable 'saw' [-Wunused-variable]
+  136 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:135:13: warning: unused variable 'phase' [-Wunused-variable]
+  135 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  17592	     12	   2284	  19888	   4db0	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+14:53:20 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: unused variable 'step' [-Wunused-variable]
+  139 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:138:11: warning: unused variable 'triangle' [-Wunused-variable]
+  138 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:137:11: warning: unused variable 'sine' [-Wunused-variable]
+  137 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:136:11: warning: unused variable 'saw' [-Wunused-variable]
+  136 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:135:13: warning: unused variable 'phase' [-Wunused-variable]
+  135 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  17596	     12	   2364	  19972	   4e04	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+14:53:51 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: unused variable 'step' [-Wunused-variable]
+  139 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:138:11: warning: unused variable 'triangle' [-Wunused-variable]
+  138 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:137:11: warning: unused variable 'sine' [-Wunused-variable]
+  137 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:136:11: warning: unused variable 'saw' [-Wunused-variable]
+  136 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:135:13: warning: unused variable 'phase' [-Wunused-variable]
+  135 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  17592	     12	   2564	  20168	   4ec8	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+14:54:55 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: unused variable 'step' [-Wunused-variable]
+  139 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:138:11: warning: unused variable 'triangle' [-Wunused-variable]
+  138 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:137:11: warning: unused variable 'sine' [-Wunused-variable]
+  137 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:136:11: warning: unused variable 'saw' [-Wunused-variable]
+  136 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:135:13: warning: unused variable 'phase' [-Wunused-variable]
+  135 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  17592	     12	   3364	  20968	   51e8	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+14:55:31 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: unused variable 'step' [-Wunused-variable]
+  139 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:138:11: warning: unused variable 'triangle' [-Wunused-variable]
+  138 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:137:11: warning: unused variable 'sine' [-Wunused-variable]
+  137 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:136:11: warning: unused variable 'saw' [-Wunused-variable]
+  136 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:135:13: warning: unused variable 'phase' [-Wunused-variable]
+  135 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  17592	     12	   4164	  21768	   5508	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+14:56:02 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: unused variable 'step' [-Wunused-variable]
+  139 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:138:11: warning: unused variable 'triangle' [-Wunused-variable]
+  138 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:137:11: warning: unused variable 'sine' [-Wunused-variable]
+  137 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:136:11: warning: unused variable 'saw' [-Wunused-variable]
+  136 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:135:13: warning: unused variable 'phase' [-Wunused-variable]
+  135 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  17592	     12	   4964	  22568	   5828	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+14:56:58 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: unused variable 'step' [-Wunused-variable]
+  139 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:138:11: warning: unused variable 'triangle' [-Wunused-variable]
+  138 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:137:11: warning: unused variable 'sine' [-Wunused-variable]
+  137 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:136:11: warning: unused variable 'saw' [-Wunused-variable]
+  136 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:135:13: warning: unused variable 'phase' [-Wunused-variable]
+  135 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  17592	     12	   5164	  22768	   58f0	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+14:57:34 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:139:11: warning: unused variable 'step' [-Wunused-variable]
+  139 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:138:11: warning: unused variable 'triangle' [-Wunused-variable]
+  138 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:137:11: warning: unused variable 'sine' [-Wunused-variable]
+  137 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:136:11: warning: unused variable 'saw' [-Wunused-variable]
+  136 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:135:13: warning: unused variable 'phase' [-Wunused-variable]
+  135 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  17592	     12	   5364	  22968	   59b8	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+15:07:39 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:159:11: warning: unused variable 'step' [-Wunused-variable]
+  159 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:158:11: warning: unused variable 'triangle' [-Wunused-variable]
+  158 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:157:11: warning: unused variable 'sine' [-Wunused-variable]
+  157 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:156:11: warning: unused variable 'saw' [-Wunused-variable]
+  156 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:155:13: warning: unused variable 'phase' [-Wunused-variable]
+  155 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  18276	     12	  11364	  29652	   73d4	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
+ 
+15:08:56 **** Incremental Build of configuration Debug for project lab3-take2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:160:11: warning: unused variable 'step' [-Wunused-variable]
+  160 |   int32_t step = 10;
+      |           ^~~~
+../Core/Src/main.c:159:11: warning: unused variable 'triangle' [-Wunused-variable]
+  159 |   int32_t triangle = 0;
+      |           ^~~~~~~~
+../Core/Src/main.c:158:11: warning: unused variable 'sine' [-Wunused-variable]
+  158 |   int32_t sine = 0;
+      |           ^~~~
+../Core/Src/main.c:157:11: warning: unused variable 'saw' [-Wunused-variable]
+  157 |   int32_t saw = 0;
+      |           ^~~
+../Core/Src/main.c:156:13: warning: unused variable 'phase' [-Wunused-variable]
+  156 |   float32_t phase = 0.0f;
+      |             ^~~~~
+arm-none-eabi-gcc -o "lab3-take2.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3-take2.map" -Wl,--gc-sections -static -L"C:\Users\Ali\STM32CubeIDE\workspace_1.16.0\lab3-take2\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3-take2.elf
+ 
+arm-none-eabi-size  lab3-take2.elf 
+arm-none-eabi-objdump -h -S lab3-take2.elf  > "lab3-take2.list"
+   text	   data	    bss	    dec	    hex	filename
+  18304	     12	  11364	  29680	   73f0	lab3-take2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab3-take2.list
  
