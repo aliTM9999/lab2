@@ -106,15 +106,15 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 	status=(status+1)%3;
 }
 
-/*volatile uint32_t sample_index = 0;
+volatile uint32_t sample_index = 0;
 volatile uint32_t sine_val =0;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim2) {
     if (htim2->Instance == TIM2) {
-    	sine_val = (uint32_t)sine_table2[sample_index];
+    	sine_val = (uint32_t)sine_table[sample_index];
         HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sine_val);
-        sample_index = (sample_index + 1) % SINE_TABLE_SIZE2;  // Loop back after one cycle
+        sample_index = (sample_index + 1) % SINE_TABLE_SIZE;  // Loop back after one cycle
     }
-}*/
+}
 
 
 
@@ -164,7 +164,7 @@ int main(void)
   HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
   //HAL_DAC_Start(&hdac1, DAC_CHANNEL_2);
   HAL_TIM_Base_Start_IT(&htim2);
-  HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)sine_table, SINE_TABLE_SIZE, DAC_ALIGN_8B_R);
+  //HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)sine_table, SINE_TABLE_SIZE, DAC_ALIGN_8B_R);
   /* USER CODE END 2 */
 
   /* Infinite loop */

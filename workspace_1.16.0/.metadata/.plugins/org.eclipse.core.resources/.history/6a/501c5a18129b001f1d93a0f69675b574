@@ -61,10 +61,10 @@ static void MX_TIM2_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-#define SINE_TABLE_SIZE 63//10*2*pi
+#define SINE_TABLE_SIZE 64//10*2*pi
 #define SINE_TABLE_SIZE2 76//12*2*pi
-#define SINE_TABLE_SIZE3 94//15*2*pi
-#define amplitude 170
+#define SINE_TABLE_SIZE3 95//15*2*pi
+#define DAC_MAX_VALUE 180
 float32_t sine_table[SINE_TABLE_SIZE];
 float32_t sine_table2[SINE_TABLE_SIZE2];
 float32_t sine_table3[SINE_TABLE_SIZE3];
@@ -72,17 +72,17 @@ float32_t sine_table3[SINE_TABLE_SIZE3];
 void GenerateSineTable(void) {
 	float32_t val=0;
     for (int i = 0; i < SINE_TABLE_SIZE; i++) {
-    	val=(arm_sin_f32(2.0f * 3.141592653 * i / SINE_TABLE_SIZE) + 1.0f) * (amplitude / 2.0f);
+    	val=(arm_sin_f32(2.0f * 3.141592653 * i / SINE_TABLE_SIZE) + 1.0f) * (DAC_MAX_VALUE / 2.0f);
         sine_table[i] = val;
     }
     val=0;
     for (int i = 0; i < SINE_TABLE_SIZE2; i++) {
-		val=(arm_sin_f32(2.0f * 3.141592653 * i / SINE_TABLE_SIZE) + 1.0f) * (amplitude / 2.0f);
+		val=(arm_sin_f32(2.0f * 3.141592653 * i / SINE_TABLE_SIZE) + 1.0f) * (DAC_MAX_VALUE / 2.0f);
 		sine_table2[i] = val;
 	}
     val=0;
 	for (int i = 0; i < SINE_TABLE_SIZE3; i++) {
-		val=(arm_sin_f32(2.0f * 3.141592653 * i / SINE_TABLE_SIZE) + 1.0f) * (amplitude / 2.0f);
+		val=(arm_sin_f32(2.0f * 3.141592653 * i / SINE_TABLE_SIZE) + 1.0f) * (DAC_MAX_VALUE / 2.0f);
 		sine_table2[i] = val;
 	}
 }
@@ -110,9 +110,9 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 volatile uint32_t sine_val =0;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim2) {
     if (htim2->Instance == TIM2) {
-    	sine_val = (uint32_t)sine_table2[sample_index];
+    	sine_val = (uint32_t)sine_table[sample_index];
         HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sine_val);
-        sample_index = (sample_index + 1) % SINE_TABLE_SIZE2;  // Loop back after one cycle
+        sample_index = (sample_index + 1) % SINE_TABLE_SIZE;  // Loop back after one cycle
     }
 }*/
 
